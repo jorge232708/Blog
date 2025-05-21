@@ -1,79 +1,176 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary: #4769FA;
+  --primary-light: #EBF1FF;
+  --text: #9db8d8;
+  --border: #f7e4e8;
+  --bg: #ffffff;
+  --dropdown-bg: #ffffff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  background: var(--bg);
+}
+
+header {
+  position: fixed;
+  height: 5rem;
+  padding: 0 1rem;
+  width: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: end;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.navigation_group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.navigation_group .icon {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  height: 3rem;
+  width: 2.25rem;
+  background: var(--dropdown-bg);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+.notification_wrapper {
+  position: relative;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.notification_count {
+  background: var(--alarm);
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.navigation_group .icon:hover {
+  transform: scale(1.1);
+}
+
+.profile_btn {
+  background: none;
+  color: inherit;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.profile_btn:hover {
+  transform: scale(1.1);
+}
+
+.profile_btn img,
+.profile_avatar {
+  display: block;
+  width: 3.125rem;
+  height: 3.125rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile_name {
+  font-size: 1.15rem;
+}
+
+.profile_email {
+  font-size: 0.95rem;
+}
+
+.dropdown_wrapper {
+  width: 17rem;
+  top: 5.25rem;
+  right: 1rem;
+  padding: 1rem;
+  position: absolute;
+  background: var(--dropdown-bg);
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  gap: 0.25rem;
+  animation: fadeOutAnimation ease-in-out 0.3s forwards;
+}
+
+.dropdown_wrapper--fade-in {
+  animation: fadeInAnimation ease-in-out 0.3s forwards;
+}
+
+.plan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem;
+  align-items: center;
+}
+
+.plan_description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.plan_description h2 {
+  font-size: 1.15rem;
+}
+
+.upgrade-btn {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  max-height: 2.5rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.upgrade-btn:hover {
+  border: 1px solid var(--primary);
+}
+
+.none {
+  display: none;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
+

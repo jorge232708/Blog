@@ -1,10 +1,10 @@
 <template>
   <router-link to="/" class="brand-link">
-    <h1>GRV_Academy</h1> </router-link>
+    <h1>GRV Academy</h1> </router-link>
 </template>
 
 <script setup>
-// No necesitamos lógica JS compleja para este componente tan simple.
+
 </script>
 
 <style scoped>

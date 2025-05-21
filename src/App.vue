@@ -1,15 +1,15 @@
 <script setup>
-import HomePage from './views/HomePage.vue'
-import Navbar from './components/Navbar.vue';
 import SecondaryNavbar from './components/SecondaryNavbar.vue';
 </script>
 
 <template>
-  <Navbar /> <SecondaryNavbar /> <router-view></router-view>
+ <SecondaryNavbar /> 
+ <router-view></router-view>
 </template>
 
 <style scoped>
 .logo {
+  top: 50px;
   height: 6em;
   padding: 1.5em;
   will-change: filter;
