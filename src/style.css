@@ -1,10 +1,11 @@
 :root {
-  --primary: #4769FA;
+  --primary: #98a8eb;
   --primary-light: #EBF1FF;
   --text: #9db8d8;
   --border: #f7e4e8;
   --bg: #ffffff;
   --dropdown-bg: #ffffff;
+  --secundary: #000000;
 }
 
 * {
@@ -64,7 +65,7 @@ header {
 .profile_btn {
   background: none;
   color: inherit;
-  border: none;
+  border: solid 1px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -94,9 +95,6 @@ header {
   gap: 0.25rem;
 }
 
-.profile_name {
-  font-size: 1.15rem;
-}
 
 .profile_email {
   font-size: 0.95rem;

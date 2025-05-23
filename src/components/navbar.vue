@@ -1,5 +1,5 @@
 <script setup>
-  import Marca from './mini_componentes/Marca.vue'
+  import Marca from '../mini_componentes/Marca.vue';
 </script>
 
 

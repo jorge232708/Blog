@@ -10,7 +10,7 @@
   border: 1px solid #ccc;
   padding: 8px 10px;
   border-radius: 20px;
-  width: 200px;
+  width: 25rem;
   margin-right: 5px;
   font-size: 0.9em;
 }

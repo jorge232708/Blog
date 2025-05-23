@@ -6,14 +6,17 @@
         <div class="profile-wrapper">
           <img class="profile-avatar" :src="userProfilePic" alt="User Avatar">
           <div class="profile-info">
-            <h2 class="profile-name">{{ userName }}</h2>
+            <h4 class="profile-name">{{ userName }}</h4>
             <p class="profile-email">{{ userEmail }}</p>
           </div>
         </div>
         <hr class="divider">
         <ul>
           <DropdownItem link="#" label="Cuenta" />
+          <DropdownItem link="#" label="Cursos" />
           <DropdownItem link="#" label="Configuración" />
+          <DropdownItem link="#" label="Guia" />
+          <DropdownItem link="#" label="Help" />
         </ul>
         <hr class="divider">
         <div class="plan">
@@ -21,10 +24,10 @@
             <h2>Plan Gratuito</h2>
             <p>1500 créditos</p>
           </div>
-          <a href="#" title="Upgrade Plan" class="upgrade-btn">Mejorar</a>
+          <a title="Upgrade Plan" class="upgrade-btn">Upgrade</a>
         </div>
         <hr class="divider">
-        <ul>
+        <ul class="CerrarSesión">
           <DropdownItem link="#" label="Cerrar Sesión" @click="handleLogout" />
         </ul>
       </nav>
@@ -37,7 +40,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import DropdownItem from '../mini_componentes/DropdownItem.vue';
 
 const showProfileDropdown = ref(false);
-const userProfilePic = '/src/assets/Gisel.png';
+const userProfilePic = '/public/Gisel.png';
 const userName = "Gisela Reyes";
 const userEmail = "Giselar61@gmail.com";
 
@@ -77,7 +80,13 @@ onBeforeUnmount(() => {
   cursor: pointer;
 }
 
-.profile-pic {
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profile-pic  {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -85,6 +94,23 @@ onBeforeUnmount(() => {
   border: 2px solid var(--primary);
 }
 
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+}
+
+.profile-name {
+  font-weight: 700;
+  margin-top: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.profile-email {
+  font-size: small;
+  color: rgba(0, 0, 0, 0.9)
+}
 
 .dropdown-wrapper {
   position: absolute;
@@ -109,6 +135,7 @@ onBeforeUnmount(() => {
 
 .divider {
   width: 100%;
+  padding-top: 1rem;
   border: 1px solid var(--border);
 }
 
@@ -119,7 +146,12 @@ onBeforeUnmount(() => {
 }
 
 .plan-description h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.plan-description p {
+  font-size: 0.7rem;
   margin-bottom: 5px;
 }
 
@@ -128,7 +160,7 @@ onBeforeUnmount(() => {
   color: var(--primary);
   padding: 0.75rem;
   border-radius: 0.5rem;
-  text-align: center;
+  margin-left: 2rem;
   font-weight: bold;
   border: 1px solid transparent;
   transition: all 0.2s ease-in-out;
@@ -136,5 +168,9 @@ onBeforeUnmount(() => {
 
 .upgrade-btn:hover {
   border: 1px solid var(--primary);
+}
+
+.CerrarSesión:hover{
+  color: var(--secundary);
 }
 </style>

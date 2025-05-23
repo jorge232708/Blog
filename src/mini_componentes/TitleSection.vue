@@ -10,9 +10,9 @@ defineProps({
 
 <style scoped>
 .title {
+  padding-left: 10rem;
   font-size: 2rem;
   color: #007bff;
   text-align: start;
-  margin-bottom: 15px;
 }
 </style>

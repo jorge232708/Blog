@@ -1,8 +1,5 @@
 <template>
-  <div class="auth-buttons">
-    <button class="auth-button register-button">Registro</button>
-    <button class="auth-button login-button" @click="handleLogin">Iniciar Sesión</button>
-  </div>
+  <button class="auth-button login-button" @click="handleLogin">Iniciar Sesión</button>
 </template>
 
 <script setup>
@@ -25,15 +22,13 @@ function handleLogin() {
   margin-left: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .auth-button:hover {
   background-color: #007bff;
   color: white;
 }
-.register-button {
-  background-color: #007bff;
-  color: white;
-}
-.register-button:hover {
+
+.login-button:hover {
   background-color: #0056b3;
   border-color: #0056b3;
 }

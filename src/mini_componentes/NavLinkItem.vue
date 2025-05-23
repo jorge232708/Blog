@@ -38,17 +38,18 @@ const showExploreDropdown = ref(false);
 
 .nav-link {
   text-decoration: none;
-  color: white;
-  background-color: #007bff;
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #ffffff;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.9);
 }
 
 .nav-link:hover {
-  background-color: #0056b3;
-  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  color: #1e266e;
 }
 
 .dropdown-menu {
