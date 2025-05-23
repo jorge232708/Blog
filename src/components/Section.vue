@@ -4,10 +4,14 @@
   </section>
 </template>
 
+<script setup>
+  
+</script>
+
 <style scoped>
 .dynamic-section {
   padding: 20px;
   border: 1px solid #ddd;
-  background-color: white;
+  justify-content: space-around;
 }
 </style>

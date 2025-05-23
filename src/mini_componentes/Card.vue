@@ -29,7 +29,8 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  width: 300px;
+  width: 297px;
+  height: 400px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;

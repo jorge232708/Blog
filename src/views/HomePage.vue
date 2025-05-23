@@ -14,9 +14,22 @@
   <SecondaryNavbar /> 
   <Main />
   <Section>
-    <Card />
+    <Card
+      title="Título del Mini Componente 1"
+      description="Descripción del Mini Componente 1"
+      imageSrc="https://via.placeholder.com/300x180"
+    />
+    <Card
+      title="Título del Mini Componente 2"
+      description="Descripción del Mini Componente 2"
+      imageSrc="https://via.placeholder.com/300x180"
+    />
+    <Card
+      title="Título del Mini Componente 3"
+      description="Descripción del Mini Componente 3"
+      imageSrc="https://via.placeholder.com/300x180"
+    />
   </Section>
-  <h1>HomePage</h1>
 </template>
   
 
@@ -26,5 +39,14 @@ h1 {
   font-size: 2em;
   text-align: center;
   margin-top: 100px;
+}
+Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  gap: 20px;
+  padding: 10px;
 }
 </style>
