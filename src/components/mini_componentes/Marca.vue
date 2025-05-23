@@ -1,6 +1,7 @@
 <template>
   <router-link to="/" class="brand-link">
-    <h1>GRV_Academy</h1> </router-link>
+    <h1>GRV Academy</h1> 
+  </router-link>
 </template>
 
 <script setup>
@@ -10,8 +11,8 @@
 <style scoped>
 .brand-link {
   text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
-  color: white; /* Hereda el color del padre (Navbar) */
   cursor: pointer; /* Indica que es clickeable */
+  color: white;
 }
 
 .brand-link h1 {
